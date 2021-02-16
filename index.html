@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <button id="click-me">Click Me</button>
+    <script>
+    window.addEventListener("DOMContentLoaded", function(e) {
+        console.log("The Page is Loaded");
+        var btn = document.querySelector("#click-me");
+        btn.addEventListener("click", function(e) {
+            console.log("The button was clicked");
+        });
+    });
 
+    window.addEventListener("orientationchange", function(a) {
+        var screen = window.screen;
+        var angle = screen.orientation.angle;
+        var type = screen.orientation.type;
+        console.log(`angle: ${ angle }, type: ${ type}`);
+    });
+    </script>
+</body>
+</html>
